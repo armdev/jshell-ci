@@ -1,4 +1,4 @@
-image: docker pull lwieske/java-8
+image: lwieske/java-8
 
 stages:       
   - testing
