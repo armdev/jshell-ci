@@ -1,4 +1,5 @@
-image: lwieske/java-8
+######image: lwieske/java-8
+image: airhacks/java
 
 stages:       
   - testing
