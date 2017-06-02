@@ -1,0 +1,18 @@
+image: docker pull lwieske/java-8
+
+stages:       
+  - testing
+  
+testing:
+    stage: testing                                           
+    script:
+   - cd ~
+   - wget http://download.java.net/java/jdk9/archive/172/binaries/jdk-9-ea+172_linux-x64_bin.tar.gz
+   - tar -xzf jdk-9-ea+172_linux-x64_bin.tar.gz
+   - JAVA_HOME=~/jdk-9
+   - PATH=$JAVA_HOME/bin:$PATH
+   - java -version
+   - //$JAVA_HOME/bin/jshell --show-version $0 $@; exit $?
+   
+    
+  
